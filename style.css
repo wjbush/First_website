@@ -1,0 +1,245 @@
+/* html {
+    background: #e6e9e9;
+    background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
+    -webkit-font-smoothing: antialiased;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300;800&display=swap');
+body {
+    background-color: #eee;
+    /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.06); */
+    color: #333;
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 2em 2em 4em; */
+    font-family: 'Anton', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h2 {
+    margin-top: 1.3em;
+}
+
+a {
+    text-decoration: none;
+    color: aqua;
+}
+a:hover {
+    text-decoration: underline;
+    color:darkblue;
+}
+b, strong {
+    font-weight: 600;
+}
+
+samp {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    /* animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
+    background: transparent;
+    border: 10px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    display: block;
+    margin: 1.3em auto;
+    max-width: 95%; */
+}
+#navbar {
+    background-color: blueviolet;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+}
+#navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden;
+    z-index: 100; 
+    /* z-index is a way to layer your content. */
+}
+#navbar li {
+    float: left;
+}
+#navbar li a{
+    display: inline-block;
+    padding: 15px; /*left & right is 5 px && top to bottom is 10 px */
+    text-decoration: none;
+    font-size: 1em;
+    color: aliceblue;
+    text-align: center;
+}
+/* #navbar li.active a{
+    color: red;
+} */
+#navbar li.active a,
+#navbar li a:hover{
+    background-color: coral;
+    color:black;
+}
+.myicon {
+    color: black;
+    font-size: 1.5em;
+    padding: 10px;
+    display: none;
+    text-align: left;
+}
+.sm-screen {
+    display: block;
+}
+#wrapper > div{
+    padding: 15px;
+}
+#wrapper{
+    background-color: white;
+    padding: 2%;
+    max-width: 1180px;
+    /* border: 1px solid black; */
+    position: relative;
+    top: 40px;
+    margin: 0 auto; /*margins allow you to center the wrapper, 0 top-bottom & auto is left-right. */
+}
+#wrapper header{
+    /* border: 1px solid black; */
+    height: 120px;
+    padding: 10px 20px;
+    background-color: #eee;
+    border-radius: 1em;
+}
+#main {
+    float: left;
+    padding: 5px;
+    /*border: 1px solid black; */
+    width: 33%;
+}
+#second {
+    float: left;
+    padding: 5px;
+    /*border: 1px solid black; */
+    width: 28%;
+}
+#wrapper aside {
+    float: left;
+    padding: 5px;
+    /* border: 1px solid black; */
+    width: 33%;
+}
+#wrapper footer{
+    clear:both;
+    /* border: 1px solid black; */
+    width: 96%;
+    background-color: gainsboro;
+    text-align: center;
+    height: 150px;
+    padding: 25px;
+}
+@media screen and (max-width: 790px) {
+    #wrapper {
+    padding: 0;
+    max-width: 100%;
+}
+#wrapper header{
+    /* border: 1px solid black; */
+    padding: 0;
+    border-radius: 0;
+}
+#main {
+    padding: 3%;
+    /*border: 1px solid black; */
+    width: 44%;
+}
+#second {
+    float: right;
+    padding: 3%;
+    /*border: 1px solid black; */
+    width: 44%;
+}
+#wrapper aside {
+    clear: both;
+    padding: 5%;
+    /* border: 1px solid black; */
+    width: 90%;
+}    
+#wrapper footer{
+    /* border: 1px solid black; */
+    width: 100%;
+    padding: 0;
+}        
+}
+@media screen and (max-width: 700px) {
+    #wrapper {
+        width: auto;
+}
+    #wrapper header{
+    /* border: 1px solid black; */
+    height: auto;
+    padding: 0px;
+}
+#wrapper header{
+    /* border: 1px solid black; */
+    width: auto;
+    float: none;
+    margin: 0px;
+    }
+#main {
+    /*border: 1px solid black; */
+    width: auto;
+    float: none;
+    margin: 0px;
+}
+#second {
+    width: auto;
+    float: none;
+    margin: 0px;
+}
+#wrapper aside {
+    padding: 0;
+    width: auto;
+}    
+#wrapper footer{
+    /* border: 1px solid black; */
+    width: auto;
+    padding: 0;
+}
+    /* */
+.sm-screen {
+    display: none;
+}
+#navbar li {
+    float: none;
+    display: block;
+}
+#navbar li a{
+    padding: 5px; /*left & right is 5 px && top to bottom is 10 px */
+    text-align: left;
+}
+    .myicon {
+        display: block;
+}
+}
+/*
+@keyframes colorize {
+    0% {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    100% {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+}
+*/
